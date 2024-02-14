@@ -1,4 +1,3 @@
-// type-color.pipe.ts
 import { Pipe, PipeTransform } from '@angular/core';
 
 interface TypeColor {
@@ -35,5 +34,6 @@ export class TypeColorPipe implements PipeTransform {
   }
 
 }
+
 
 

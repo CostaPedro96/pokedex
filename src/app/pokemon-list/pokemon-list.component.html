@@ -1,4 +1,3 @@
-<!-- pokemon-list.component.html -->
 <app-search-bar (searchTermChange)="onSearchTermChange($event)"></app-search-bar>
 <div class="pokemon-container">
   <div class="pokemon-card lightblue-background" *ngFor="let pokemon of filteredPokemons" (click)="goToDetail(pokemon.id)">
@@ -9,3 +8,4 @@
     </div>
   </div>
 </div>
+
