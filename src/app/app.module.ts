@@ -12,6 +12,7 @@ import { TypeColorPipe } from './type-color.pipe';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { LoginComponent } from './login/login.component';
 import { HttpsInterceptor } from './https.interceptor';
+import { ZoomDirective } from './zoom.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpsInterceptor } from './https.interceptor';
     PokemonDetailComponent,
     TypeColorPipe,
     SearchBarComponent,
-    LoginComponent
+    LoginComponent,
+    ZoomDirective
   ],
   imports: [
     BrowserModule,
