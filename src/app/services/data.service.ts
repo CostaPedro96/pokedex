@@ -15,7 +15,7 @@ export class DataService {
   }
 
   getPokemon(id: number): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/${id}`); 
+    return this.http.get<any>(`${this.apiUrl}/${id}`);
   }
 
 
@@ -27,5 +27,9 @@ export class DataService {
     const pokemonId = updatedPokemon.id;
     const updateUrl = `${this.apiUrl}/${pokemonId}`;
     return this.http.put<any>(updateUrl, updatedPokemon);
+  }
+
+  deletePokemon(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
 }

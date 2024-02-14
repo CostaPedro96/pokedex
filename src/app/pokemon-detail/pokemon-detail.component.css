@@ -11,23 +11,23 @@
   align-items: center;
 }
 
-.detail-container img {
-  max-width: 200px; /* Adjust the max-width as needed */
-  margin-bottom: 20px;
-}
+  .detail-container img {
+    max-width: 200px; /* Adjust the max-width as needed */
+    margin-bottom: 20px;
+  }
 
-.detail-container p {
-  margin: 5px 0;
-}
+  .detail-container p {
+    margin: 5px 0;
+  }
 
-.detail-container ul {
-  list-style-type: none;
-  padding: 0;
-}
+  .detail-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
-.detail-container li {
-  margin: 5px 0;
-}
+  .detail-container li {
+    margin: 5px 0;
+  }
 
 /* Define CSS classes for rounded types */
 .rounded-type {
@@ -54,7 +54,7 @@
 
 .edit-container {
   width: 100%;
-  margin-top: 20px;/* Ensure the edit container takes full width */
+  margin-top: 20px; /* Ensure the edit container takes full width */
 }
 
 .form-group {
@@ -70,4 +70,9 @@
 .edit-container {
   width: 100%; /* Ensure the edit container takes full width */
   text-align: center; /* Center text */
+}
+
+.delete-button {
+  margin-right: 10px;
+  margin-left: 10px; /* Adjust the margin as needed */
 }

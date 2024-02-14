@@ -12,7 +12,7 @@ import { Location } from '@angular/common';
 export class PokemonDetailComponent implements OnInit {
   pokemon: any;
 
-  constructor(private route: ActivatedRoute, private dataService: DataService,private location: Location) { }
+  constructor(private route: ActivatedRoute, private dataService: DataService, private location: Location) { }
 
   ngOnInit(): void {
     this.getPokemonDetails();
@@ -27,7 +27,7 @@ export class PokemonDetailComponent implements OnInit {
           this.pokemon = pokemon;
         });
     } else {
-      
+
       console.error('No ID parameter found in the route');
     }
   }
@@ -40,11 +40,21 @@ export class PokemonDetailComponent implements OnInit {
     this.dataService.updatePokemon(this.pokemon)
       .subscribe(() => {
         console.log('Pokemon updated successfully');
-        
+
       });
   }
 
+  deletePokemon(): void {
+    if (confirm('Are you sure you want to delete this Pokemon?')) {
+      this.dataService.deletePokemon(this.pokemon.id)
+        .subscribe(() => {
+
+          this.goBack();
+        });
+    }
+  }
+
   goBack(): void {
-    this.location.back(); 
+    this.location.back();
   }
 }
