@@ -1,0 +1,11 @@
+<!-- pokemon-list.component.html -->
+<app-search-bar (searchTermChange)="onSearchTermChange($event)"></app-search-bar>
+<div class="pokemon-container">
+  <div class="pokemon-card lightblue-background" *ngFor="let pokemon of filteredPokemons" (click)="goToDetail(pokemon.id)">
+    <img [src]="getPokemonImage(pokemon.id)" alt="{{ pokemon.name }}">
+    <p>{{ pokemon.name }}</p>
+    <div class="types">
+      <span *ngFor="let type of pokemon.types" [class]="'type-' + type.toLowerCase() + ' rounded-type' " [style]="type | typeColor">{{ type }}</span>
+    </div>
+  </div>
+</div>
